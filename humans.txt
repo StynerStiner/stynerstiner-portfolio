@@ -1,0 +1,13 @@
+/* TEAM */
+Developer: Styner Stiner (StynerDev)
+Dev Website: https://www.styner.dev/
+Website URL: https://portfolio.stynerdev.com/
+GitHub: github.com/StynerStiner
+LinkedIn: linkedin.com/in/styner-stiner
+Location: Oakland, California
+
+/* SITE */
+Last update: 2026/11
+Language: English
+Standards: HTML5, CSS3, JavaScript (ES6)
+Libraries: GSAP, Lenis, Swiper (used under their licenses)
