@@ -20902,3 +20902,11 @@ form textarea:required:valid {
 
 /* Short story under a featured project card */
 .styner-card-story { margin: 1.2rem 0 0; max-width: 60ch; font-size: 1.5rem; line-height: 1.55; opacity: .8; }
+
+/* Featured build: same three-column card as the styner.dev homepage */
+.styner-links { display: flex; flex-wrap: wrap; gap: .4rem 2rem; margin-top: 1.6rem; }
+.styner-card-note { margin-top: 1.4rem; font-size: 1.5rem; line-height: 1.5; opacity: .8; }
+.mxd-cpb-list__image a { display: block; }
+.styner-featured-block { margin-bottom: 8rem; }
+.styner-featured-block .mxd-cpb-list__tags { margin-top: 2.4rem; }
+@media (min-width: 1200px) { .styner-featured-block { margin-bottom: 12rem; } }
