@@ -1171,7 +1171,7 @@ function mxdGravity() {
     ScrollTrigger.refresh();
     const container = document.querySelector(".object-container");
     if (container) initPhysics(container);
-    console.log("Function relaunched on window resize!");
+    // re-run on resize
   }
 
   window.addEventListener("resize", myFunctionToRelaunch);
