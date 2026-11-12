@@ -20892,3 +20892,5 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Block - Images Grid End */
 /* ------------------------------------------------*/
+
+  .mxd-split-lines .line-mask { padding-bottom: .14em; margin-bottom: -.14em; }
