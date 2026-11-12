@@ -45,6 +45,28 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Custom Browser Color End -->
      
+    <style>
+      .styner-topnav { display: none; }
+      @media (min-width: 1200px) {
+        .styner-topnav { display: flex; gap: 3.2rem; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 5; }
+        .styner-topnav a { font-weight: 600; font-size: 1.5rem; line-height: 1; text-transform: uppercase; letter-spacing: .04em; color: var(--t-bright); text-decoration: none; padding-bottom: .4rem; border-bottom: 2px solid transparent; transition: border-color .2s, color .2s; }
+        .styner-topnav a:hover, .styner-topnav a.is-active { border-color: var(--accent); color: var(--accent); }
+      }
+      .pf-hero { display: grid; grid-template-columns: 1fr; gap: 5rem; align-items: center; padding-top: 7rem; padding-bottom: 10rem; }
+      @media (min-width: 1200px) { .pf-hero { grid-template-columns: 7fr 5fr; gap: 7rem; } }
+      .pf-hero h1 { text-align: left; }
+      .pf-hero .mxd-hero-landing__title, .pf-hero .mxd-hero-landing__subtitle { mix-blend-mode: normal !important; }
+      .pf-hero .mxd-hero-landing__subtitle .btn { color: var(--accent) !important; }
+      .pf-hero__lead { font-size: 2rem; line-height: 1.45; margin-top: 2.4rem; max-width: 60rem; opacity: .85; }
+      .pf-hero__jump { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 3rem; }
+      .pf-hero__jump a { border: 1px solid currentColor; border-radius: 99px; padding: .9rem 1.6rem; font-size: 1.4rem; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; text-decoration: none; color: var(--t-bright); transition: background .2s, color .2s; }
+      .pf-hero__jump a:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+      .pf-hero__photo { position: relative; max-width: 40rem; width: 100%; margin: 0 auto; transform: rotate(2deg); }
+      .pf-hero__photo::before { content: ""; position: absolute; inset: 0; transform: translate(1.8rem, 1.8rem) rotate(-3deg); border: 2px solid var(--accent); border-radius: 2.6rem; z-index: -1; }
+      .pf-hero__photo::after { content: ""; position: absolute; width: 2.4rem; height: 2.4rem; right: -1.2rem; top: -1.2rem; background: var(--accent); }
+      .pf-hero__photo img { display: block; width: 100%; border-radius: 2.4rem; box-shadow: 0 2.4rem 6rem rgba(0,0,0,.22); }
+      
+    </style>
   </head>
 
   <body>
@@ -110,11 +132,7 @@
           <!-- Menu Media Start -->
           <div class="mxd-menu__media">
             <div class="menu-media__wrapper">
-              <!-- <img src="https://dummyimage.com/900x1280/5d5d5d/838383" alt="Image"> -->
-              <video preload="auto" autoplay muted loop playsinline poster="https://dummyimage.com/900x1280/5d5d5d/838383">
-                <source type="video/mp4" src="video/900x1280.mp4">
-                <source type="video/webm" src="video/900x1280.webm">
-              </video>
+              <img src="img/styner-ddia.webp" alt="Styner Stiner">
             </div>
           </div>
           <!-- Menu Media End -->
@@ -224,6 +242,7 @@
         </a>
       </div>
       <!-- header controls -->
+      <nav class="styner-topnav" aria-label="Main"><a href="https://www.styner.dev/">Home</a><a href="https://www.styner.dev/projects/">Work</a><a href="https://www.styner.dev/about/">About</a><a href="https://www.styner.dev/services/">Services</a><a href="https://www.styner.dev/contact/">Contact</a><a class="is-active" href="/">Portfolio</a></nav>
       <div class="mxd-header__controls loading-fade">
         <a class="btn mxd-header__link slide-right" href="mailto:contact@stynerdev.com" aria-label="Email Styner">
           <span class="btn-caption mxd-scramble">Let's talk</span>
@@ -276,21 +295,26 @@
 
           <!-- Block - Hero Start -->
           <div class="mxd-block">
-            <div class="mxd-hero-landing">
-              <div class="mxd-hero-landing__wrap">
-                <div class="mxd-hero-landing__headline mxd-grid-item">
-                  <div class="mxd-hero-landing__subtitle loading-item">
-                    <a class="btn btn-line btn-line-permanent" href="#0">
-                      <span class="btn-caption mxd-scramble">Technical founder · Oakland, CA</span>
-                    </a>
-                  </div>
-                  <div class="mxd-hero-landing__title">
-                    <a class="active-cursor-accent" data-cursor-text="See my work" href="#founded">
-                      <h1 class="medium permanent loading-split">I build from inside my community</h1>
-                    </a>
-                  </div>
+            <div class="pf-hero">
+              <div class="pf-hero__text mxd-grid-item">
+                <div class="mxd-hero-landing__subtitle loading-item">
+                  <a class="btn btn-line" href="https://www.styner.dev/about/">
+                    <span class="btn-caption mxd-scramble">Styner Stiner · Oakland, CA</span>
+                  </a>
+                </div>
+                <div class="mxd-hero-landing__title">
+                  <a class="active-cursor-accent" data-cursor-text="See my work" href="#founded">
+                    <h1 class="medium loading-split">I build from inside my community</h1>
+                  </a>
+                </div>
+                <p class="pf-hero__lead loading-item">Every live site I've built, organized by who I built it for: what I founded, Canticle Farm, students I taught abroad, and kids' coding games.</p>
+                <div class="pf-hero__jump loading-item">
+                  <a href="#founded">Founded</a><a href="#farm">Canticle Farm</a><a href="#world">Taught &amp; built together</a><a href="#kids">Kids' games</a>
                 </div>
               </div>
+              <figure class="pf-hero__photo loading-item">
+                <img src="img/styner-ddia.webp" alt="Styner Stiner with Designing Data-Intensive Applications on screen">
+              </figure>
             </div>
           </div>
           <!-- Block - Hero End -->
